@@ -1,14 +1,12 @@
 package ContestProblems;
 
 import java.util.ArrayList;
-import java.util.LinkedHashSet;
 import java.util.List;
 
 public class FindPossibleIndicesInTheGivenArray { //leetcode 3006
     class Solution {
     public List<Integer> beautifulIndices(String s, String a, String b, int k) {
         List<Integer> list = new ArrayList<>();
-        LinkedHashSet<Integer> set = new LinkedHashSet<>();
         int i = 0;
         int j = 0;
               ArrayList<Integer> ans = new ArrayList<>();
@@ -17,7 +15,7 @@ public class FindPossibleIndicesInTheGivenArray { //leetcode 3006
                 if (s.substring(j, j + b.length()).equals(b.substring(0, b.length()))) 
                 {
                      ans.add(j);
-                     j = j + b.length()-1;
+                    
                 }
                     j++;
                 }
@@ -34,17 +32,13 @@ public class FindPossibleIndicesInTheGivenArray { //leetcode 3006
                       }
 
                   }
-                  
-                i = i + a.length() - 1;
+                
                 }
                 
                 i++;
                 
             }
-            for(int it : set)
-            {
-                list.add(it);
-            }
+           
             return list;
             
   
